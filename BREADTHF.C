@@ -24,6 +24,7 @@ void main()
 {
  int s,i,en;
  struct node *ptr;
+ clrscr();
  printf("Enter no of vertices:");
  scanf("%d",&v);
  adj= (struct node **)malloc((v+1)*sizeof(struct node *));
@@ -41,7 +42,7 @@ void main()
    adjlistRep(adj1,en,s);
  }
  dfs();
- dfs();
+ dfs1();
  getch();
 }
 void dfs()
@@ -61,7 +62,7 @@ void dfsvisit(int u)
  int w;
  struct node *ptr;
  visited[u]=1;
- printf("%d",u);
+ printf(" %d ",u);
  ptr=adj[u];
  while(ptr!=NULL)
  {
@@ -78,7 +79,7 @@ void dfsvisit1(int u)
  int w;
  struct node *ptr;
  visited[u]=1;
- printf("%d",u);
+ printf(" %d ",u);
  ptr=adj1[u];
  while(ptr!=NULL)
  {
@@ -102,7 +103,7 @@ int visitedAll()
 void dfs1()
 {
  int i,max=0,ver;
- printf("\n coponents:\n");
+ printf("\n components:\n");
  for(i=0;i<=v;i++)
    visited[i]=0;
  while(!visitedAll())
@@ -121,6 +122,5 @@ void dfs1()
   printf("}\n");
  }
 }
-
 
 
