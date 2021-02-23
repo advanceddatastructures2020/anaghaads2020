@@ -48,6 +48,7 @@ void main()
       break;
     case 4:
       printf("Exiting from app...\n");
+      exit(0)	  
       break;
     default:
       printf("Invalid choice, Please try again.\n");
